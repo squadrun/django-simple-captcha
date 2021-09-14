@@ -64,7 +64,7 @@ def captcha_image(request, key, scale=1):
         raise ImproperlyConfigured('settings.CAPTCHA_FONT_PATH needs to be a path to a font or list of paths to fonts')
 
     if fontpath.lower().strip().endswith('ttf'):
-        font = ImageFont.truetype(fontpath, settings.CAPTCHA_FONT_SIZE * scale)
+        font = ImageFont.truetype(fontpath, settings.CAPTCHA_FONT_SIZE * scale, layout_engine=ImageFont.LAYOUT_BASIC)
     else:
         font = ImageFont.load(fontpath)
 
