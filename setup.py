@@ -31,7 +31,7 @@ install_requires = [
     'setuptools',
     'six >=1.2.0',
     'Django >= 1.7',
-    'Pillow >=2.2.2'
+    'Pillow-SIMD'
 ]
 
 setup(
